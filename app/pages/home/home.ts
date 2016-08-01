@@ -13,8 +13,8 @@ export class HomePage {
         platform.ready().then(() => {
             console.log("Home ready");
             let options = {
-                name: 'todo.db',
-                iosDatabaseLocation: 'default'
+                name: 'todo.db'
+                //iosDatabaseLocation: 'default'
             }
             this.storage = new Storage(SqlStorage, options);
             this.refresh();

@@ -21,8 +21,8 @@ export class MyApp {
             StatusBar.styleDefault();
 
             let options = {
-                name: 'todo.db',
-                iosDatabaseLocation: 'default'
+                name: 'todo.db'
+                //iosDatabaseLocation: 'default'
             }
             this.storage = new Storage(SqlStorage, options);
             this.storage.query('CREATE TABLE IF NOT EXISTS todos (id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT, done TEXT)').then((data) => {
